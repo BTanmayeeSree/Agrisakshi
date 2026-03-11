@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Crop Recommender Design System - Earth to Sky Theme
+All colors MUST be HSL. Inspired by Indian agriculture: soil, crops, sky.
+*/
+
+@layer base {
+  :root {
+    /* Earth to Sky Color Palette */
+    --background: 45 15% 97%;
+    --foreground: 25 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Agricultural Green Primary */
+    --primary: 120 60% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soil Brown Secondary */
+    --secondary: 30 40% 85%;
+    --secondary-foreground: 25 25% 15%;
+
+    /* Sky Muted */
+    --muted: 200 20% 95%;
+    --muted-foreground: 200 10% 45%;
+
+    /* Crop Accent */
+    --accent: 85 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 90%;
+    --input: 30 20% 95%;
+    --ring: 120 60% 30%;
+
+    --radius: 1rem;
+
+    /* Agricultural Theme Colors */
+    --soil: 25 40% 25%;
+    --soil-light: 30 30% 70%;
+    --crop-green: 120 60% 40%;
+    --crop-light: 120 40% 85%;
+    --sky-blue: 200 60% 50%;
+    --sky-light: 200 40% 90%;
+    --harvest-gold: 45 80% 55%;
+    --rain-blue: 220 60% 45%;
+    
+    /* Gradients */
+    --gradient-earth: linear-gradient(135deg, hsl(25, 40%, 25%) 0%, hsl(120, 60%, 30%) 50%, hsl(200, 60%, 50%) 100%);
+    --gradient-crop: linear-gradient(135deg, hsl(85, 60%, 50%) 0%, hsl(120, 60%, 40%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200, 40%, 90%) 0%, hsl(200, 60%, 50%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(45, 15%, 97%) 0%, hsl(30, 20%, 95%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(25, 40%, 25% / 0.1);
+    --shadow-card: 0 8px 30px -5px hsl(25, 40%, 25% / 0.15);
+    --shadow-elevated: 0 16px 40px -8px hsl(25, 40%, 25% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with earth tones */
+    --background: 25 25% 8%;
+    --foreground: 45 15% 95%;
+
+    --card: 25 25% 10%;
+    --card-foreground: 45 15% 95%;
+
+    --popover: 25 25% 10%;
+    --popover-foreground: 45 15% 95%;
+
+    --primary: 120 60% 45%;
+    --primary-foreground: 25 25% 8%;
+
+    --secondary: 25 20% 20%;
+    --secondary-foreground: 45 15% 90%;
+
+    --muted: 25 20% 15%;
+    --muted-foreground: 200 10% 60%;
+
+    --accent: 85 60% 55%;
+    --accent-foreground: 25 25% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 15%;
+    --ring: 120 60% 45%;
+    
+    /* Dark theme agricultural colors */
+    --soil: 25 30% 70%;
+    --soil-light: 30 25% 30%;
+    --crop-green: 120 50% 60%;
+    --crop-light: 120 30% 25%;
+    --sky-blue: 200 50% 70%;
+    --sky-light: 200 30% 20%;
+    --harvest-gold: 45 70% 65%;
+    --rain-blue: 220 50% 65%;
+  }
+}
+
+/* Custom utility classes for agricultural theme */
+@layer utilities {
+  .bg-gradient-earth {
+    background: var(--gradient-earth);
+  }
+  
+  .bg-gradient-crop {
+    background: var(--gradient-crop);
+  }
+  
+  .bg-gradient-sky {
+    background: var(--gradient-sky);
+  }
+  
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
